@@ -1,3 +1,18 @@
+import { notFound } from "next/navigation"; //  For the default 404
+
+export const dynamicParams = true; // This makes the page static return a 404 if the id is not found
+
+
+export async function generateStaticParams() {
+  const res = await fetch('http://localhost:4000/tickets');
+
+  const tickets = await res.json();
+
+  return tickets.map((ticket) => ({
+    id: ticket.id
+  }))
+}
+
 import Link from 'next/link';
 
 async function GetTicket(id) {
@@ -6,6 +21,10 @@ async function GetTicket(id) {
       revalidate: 60
     }
   })
+
+  if(!res.ok) {
+    notFound()
+  }
   return res.json()
 }
 
@@ -28,7 +47,9 @@ export default async function TicketDetails({ params }) {
       </div>
       <Link href="/tickets">
         <h2 className="text-gray-600 hover:text-gray-950">Back to Tickets</h2>
-        </Link>
+        </Link> 
+
+
     </main>
   )
 }

@@ -1,6 +1,6 @@
 import Link  from 'next/link';
 import Image from 'next/image'
-import Logo from './AR2.svg';
+import Logo from '../../public/AR2.svg';
 
 
 export default function Navbar() {
