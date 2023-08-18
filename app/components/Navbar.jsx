@@ -4,16 +4,19 @@ import Logo from '../../public/AR2.svg';
 
 export default function Navbar() {
   return (
-    <nav>
-      <Image src={Logo} alt='Logo' width={50} quality={100} />
+    <nav className='flex items-center justify-between p-4'>
+      <div className='flex items-center gap-3'>
+        <Image src={Logo} alt='Logo' width={50} quality={100} />
 
-      <h1>Help desk</h1>
-      <Link href='/'>Dashboard</Link>
-      <Link href='/tickets'>Tickets</Link>
-      <Link href='/tickets/create'>Add Ticket</Link>
-
-      <Link href='/login'>Login</Link>
+        <h1>Help desk</h1>
+        <Link href='/'>Dashboard</Link>
+        <Link href='/tickets'>Tickets</Link>
+        <Link href='/tickets/create'>Add Ticket</Link>
+      </div>
+      <div className="flex items-center gap-3">
       <Link href='/signup'>Signup</Link>
+      <Link href='/login'>Login</Link>
+      </div>
     </nav>
   );
 }

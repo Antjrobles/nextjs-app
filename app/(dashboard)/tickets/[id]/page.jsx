@@ -2,6 +2,17 @@ import { notFound } from "next/navigation"; //  For the default 404
 
 export const dynamicParams = true; // This makes the page static return a 404 if the id is not found
 
+export async function generateMetadata({ params }) {
+  const id = params.id
+
+  const res = await fetch(`http://localhost:4000/tickets/${id}`)
+  const ticket = await res.json()
+ 
+  return {
+    title: `Helpdesk | ${ticket.title}`
+  }
+}
+
 
 export async function generateStaticParams() {
   const res = await fetch('http://localhost:4000/tickets');

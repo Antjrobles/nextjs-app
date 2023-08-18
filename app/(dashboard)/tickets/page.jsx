@@ -1,7 +1,11 @@
 import { Suspense } from "react"
 import TicketList from "./TicketList"
 import Loading from "../loading"
-import Link from "next/link"
+import Link from "next/link";
+
+export const metadata = {
+  title: 'Tickets Helpdesk',
+}
 
 export default function Tickets() {
   return (
