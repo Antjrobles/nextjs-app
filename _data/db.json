@@ -34,6 +34,20 @@
       "priority": "low",
       "user_email": "mario@netninja.dev",
       "id": "0Ugx9sB"
+    },
+    {
+      "title": "Test 7 ",
+      "body": "After n`pm run build",
+      "priority": "low",
+      "user_email": "mario@netninja.dev",
+      "id": "vYWfR06"
+    },
+    {
+      "title": "Ticket 8",
+      "body": "svscasc",
+      "priority": "medium",
+      "user_email": "mario@netninja.dev",
+      "id": "8KEVWIl"
     }
   ]
 }
