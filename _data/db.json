@@ -55,6 +55,13 @@
       "user_email": "antjrobles@gmail.com",
       "priority": "low",
       "id": "IcfUSrE"
+    },
+    {
+      "title": "POST made from Postman",
+      "body": "asfd dgfsdgfs wfesfwef dfsdf sdfsdfsdfsdfs",
+      "user_email": "test@gmail.com",
+      "priority": "medium",
+      "id": "UzjkTkN"
     }
   ]
 }
