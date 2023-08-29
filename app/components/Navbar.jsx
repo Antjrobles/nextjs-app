@@ -13,7 +13,7 @@ export default function Navbar({ user }) {
         <Link href='/tickets'>Tickets</Link>
         <Link href='/tickets/create'>Add Ticket</Link>
       </div>
-        {user && <span>Hello {user.email}</span>}
+         {user && <span className="text-primary font-bold text-xl">Hello {user.email}</span>}
       <div className="flex items-center gap-3">
       <Link href='/signup'>Signup</Link>
       <Link href='/login'>Login</Link>
