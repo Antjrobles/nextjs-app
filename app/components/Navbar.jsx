@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '../../public/AR2.svg';
 
-export default function Navbar() {
+export default function Navbar({ user }) {
   return (
     <nav className='flex items-center justify-between p-4'>
       <div className='flex items-center gap-3'>
@@ -13,6 +13,7 @@ export default function Navbar() {
         <Link href='/tickets'>Tickets</Link>
         <Link href='/tickets/create'>Add Ticket</Link>
       </div>
+        {user && <span>Hello {user.email}</span>}
       <div className="flex items-center gap-3">
       <Link href='/signup'>Signup</Link>
       <Link href='/login'>Login</Link>
