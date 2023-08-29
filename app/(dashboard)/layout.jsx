@@ -1,4 +1,4 @@
-import Navbar from '@/app/components/Navbar'
+import Navbar from '@/app/components/Navbar';
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { cookies} from 'next/headers';
 
