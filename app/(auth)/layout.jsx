@@ -14,7 +14,7 @@ export default async function AuthLayout({ children }) {
   return (
     <>
       <nav>
-        <h1>Dojo Helpdesk</h1>
+        <Link href='/'><h1>Helpdesk</h1></Link>
         <Link href="/signup">Sign up</Link>
         <Link href="/login">Login</Link>
       </nav>
