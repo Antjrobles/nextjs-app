@@ -3,8 +3,11 @@ import Image from 'next/image';
 import Logo from '../../public/AR2.svg';
 import LogoutButton from './LogoutButton';
 
-
 export default function Navbar({ user }) {
+  const email = user && user.email;
+  const userName = email.split('@')[0];
+  const capitalizedUserName = userName.charAt(0).toUpperCase() + userName.slice(1);
+
   return (
     <nav className='flex items-center justify-between p-4'>
       <div className='flex items-center gap-3 mr-auto'>
@@ -15,8 +18,8 @@ export default function Navbar({ user }) {
         <Link href='/tickets'>Tickets</Link>
         <Link href='/tickets/create'>Add Ticket</Link>
       </div>
-         {user && <span className="text-primary font-bold text-xl">Hello {user.email}</span>}
-         <LogoutButton />
+      {user && <span className='text-primary font-bold text-xl'>Hello {capitalizedUserName}</span>}
+      <LogoutButton />
       {/* <div className="flex items-center gap-3">
       <Link href='/signup'>Signup</Link>
       <Link href='/login'>Login</Link>
