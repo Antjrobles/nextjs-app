@@ -1,0 +1,19 @@
+# Excluir archivos/directorios específicos
+node_modules
+.next
+.env
+*Dockerfile*
+
+# Excluir archivos de desarrollo
+*.log
+*.test.js
+ .results
+
+# Excluir archivos y directorios relacionados con Git
+.git
+.gitignore
+
+# Excluir archivos temporales
+.DS_Store
+Thumbs.db
+
